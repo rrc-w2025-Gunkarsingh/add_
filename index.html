@@ -23,13 +23,12 @@ body{
   overflow-x:hidden;
 }
 
-/* Smooth Reveal Animation */
+/* Scroll Reveal */
 .reveal{
   opacity:0;
   transform:translateY(40px);
   transition:all 0.8s ease;
 }
-
 .reveal.active{
   opacity:1;
   transform:translateY(0);
@@ -47,7 +46,6 @@ header{
 
 header h1{
   font-size:1.2rem;
-  letter-spacing:1px;
 }
 
 header a{
@@ -58,7 +56,6 @@ header a{
   text-decoration:none;
   transition:0.3s;
 }
-
 header a:hover{
   transform:scale(1.05);
   box-shadow:0 4px 12px rgba(193,18,31,0.4);
@@ -66,7 +63,7 @@ header a:hover{
 
 /* HERO */
 .hero{
-  padding:80px 5%;
+  padding:90px 5%;
   background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
   url("https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMH8spbWvanYb%255y%25oq%25vSTmjMXD4qAZeoNBPUSfUx4RmHlCgI7Zl2dioCxkF%25vUqCNwuWXsO7QNeV6iTxjgzhRc2LUjqA7fQrmVOJUPYDImTB8VuyY0oVk0DBRlqvzpQNqjdtAsvyJ5I") center/cover;
   color:white;
@@ -75,10 +72,9 @@ header a:hover{
 
 .hero h2{
   font-size:2rem;
-  margin-bottom:10px;
+  margin-bottom:12px;
   animation:fadeDown 1s ease;
 }
-
 .hero p{
   animation:fadeUp 1.2s ease;
 }
@@ -87,25 +83,18 @@ header a:hover{
   from{opacity:0;transform:translateY(-30px)}
   to{opacity:1;transform:translateY(0)}
 }
-
 @keyframes fadeUp{
   from{opacity:0;transform:translateY(30px)}
   to{opacity:1;transform:translateY(0)}
 }
 
 /* SECTIONS */
-section{
-  padding:60px 5%;
-}
-
-.container{
-  max-width:1100px;
-  margin:auto;
-}
+section{padding:60px 5%}
+.container{max-width:1100px;margin:auto}
 
 .section-title{
   font-size:1.6rem;
-  margin-bottom:30px;
+  margin-bottom:25px;
   border-left:5px solid var(--primary);
   padding-left:12px;
 }
@@ -113,26 +102,36 @@ section{
 /* SERVICES */
 .services{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
 }
 
 .card{
   background:var(--gray);
-  padding:25px;
-  border-radius:10px;
+  padding:18px;
+  border-radius:8px;
   transition:0.3s;
 }
 
 .card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 15px 30px rgba(0,0,0,0.1);
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card h4{
+  font-size:1rem;
+  margin-bottom:6px;
+}
+
+.card p{
+  font-size:0.85rem;
 }
 
 .price{
+  font-size:0.9rem;
   color:var(--primary);
   font-weight:bold;
-  margin-top:10px;
+  margin-top:6px;
 }
 
 /* GALLERY */
@@ -140,13 +139,13 @@ section{
 
 .gallery-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:15px;
 }
 
 .gallery-grid img{
   width:100%;
-  height:220px;
+  height:200px;
   object-fit:cover;
   border-radius:10px;
   transition:0.4s;
@@ -164,13 +163,12 @@ section{
 }
 
 .trust-box{
-  padding:20px;
+  padding:18px;
   background:var(--gray);
   border-radius:8px;
   text-align:center;
   transition:0.3s;
 }
-
 .trust-box:hover{
   transform:scale(1.05);
 }
@@ -194,7 +192,6 @@ section{
   text-decoration:none;
   transition:0.3s;
 }
-
 .cta a:hover{
   transform:scale(1.07);
 }
@@ -205,17 +202,28 @@ footer{
   color:white;
   text-align:center;
   padding:25px;
+  font-size:0.9rem;
 }
 
-/* Sticky Mobile Call */
-.mobile-call{
-  display:none;
-}
+/* MOBILE */
+.mobile-call{display:none;}
 
 @media(max-width:768px){
   header{
     flex-direction:column;
     gap:10px;
+  }
+
+  .card{
+    padding:14px;
+  }
+
+  .card h4{
+    font-size:0.95rem;
+  }
+
+  .card p{
+    font-size:0.8rem;
   }
 
   .mobile-call{
@@ -253,17 +261,31 @@ footer{
 
 <div class="hero">
   <h2>Reliable Mechanical Service You Can Trust</h2>
-  <p>Professional diagnostics, repairs, and maintenance.</p>
+  <p>Professional certified mechanic. From maintenance to full engine & transmission work — we handle everything.</p>
 </div>
 
 <section class="reveal">
 <div class="container">
 <h3 class="section-title">Our Services</h3>
+
 <div class="services">
+
 <div class="card"><h4>Oil Change</h4><p>Fully synthetic oil & filter replacement.</p><div class="price">$70</div></div>
+
 <div class="card"><h4>German Car Service</h4><p>Liqui Moly oil & inspection.</p><div class="price">$120</div></div>
-<div class="card"><h4>Diagnostics</h4><p>Full system scan.</p><div class="price">$50</div></div>
-<div class="card"><h4>Tire Change</h4><p>Seasonal change & balance.</p><div class="price">$100</div></div>
+
+<div class="card"><h4>Diagnostics</h4><p>Advanced full vehicle system scan.</p><div class="price">$50</div></div>
+
+<div class="card"><h4>Transmission Repair</h4><p>Automatic & manual transmission repair.</p><div class="price">Call for Quote</div></div>
+
+<div class="card"><h4>Engine Repair</h4><p>Engine rebuilds, gasket replacement & full repair.</p><div class="price">Call for Quote</div></div>
+
+<div class="card"><h4>Suspension & Steering</h4><p>Shocks, struts & steering system service.</p><div class="price">Call for Quote</div></div>
+
+<div class="card"><h4>AC & Heating</h4><p>Complete climate system repair.</p><div class="price">Call for Quote</div></div>
+
+<div class="card"><h4>Battery Replacement</h4><p>Battery testing & installation.</p><div class="price">From $120</div></div>
+
 </div>
 </div>
 </section>
@@ -273,9 +295,9 @@ footer{
 <h3 class="section-title">Our Work</h3>
 <div class="gallery-grid">
 <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e">
-<img src="https://tse3.mm.bing.net/th/id/OIP.iALEbjJ-lRjWmBXp8Z7cCAHaEZ">
 <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc">
-<img src="https://tse3.mm.bing.net/th/id/OIP.vxxH0AewSOnfhcIrdr-EPAHaFS">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+<img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99">
 </div>
 </div>
 </section>
@@ -311,7 +333,6 @@ footer{
 
 <script>
 const reveals = document.querySelectorAll(".reveal");
-
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
@@ -319,7 +340,6 @@ const observer = new IntersectionObserver(entries=>{
     }
   });
 },{threshold:0.1});
-
 reveals.forEach(el=>observer.observe(el));
 </script>
 
