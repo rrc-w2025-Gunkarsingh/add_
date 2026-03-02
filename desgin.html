@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Overide Auto Repair - Professional mechanics in Winnipeg. Oil changes, brake service, diagnostics, and tire changes.">
+<title>Overide Auto Repair | Winnipeg Mechanic</title>
+
+<style>
+:root{
+  --primary:#c1121f;
+  --dark:#1b1b1b;
+  --gray:#f4f4f4;
+  --text:#333;
+  --light:#fff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color:var(--text);
+  line-height:1.6;
+}
+
+/* ===== HEADER ===== */
+header{
+  background:var(--dark);
+  color:var(--light);
+  padding:20px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1{font-size:1.5rem}
+
+header a{
+  background:var(--primary);
+  color:var(--light);
+  padding:12px 18px;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:600;
+  transition:opacity 0.2s;
+}
+
+header a:hover{opacity:0.9}
+
+/* ===== HERO ===== */
+.hero{
+  padding:80px 5%;
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+  url("https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMH8spbWvanYb%255y%25oq%25vSTmjMXD4qAZeoNBPUSfUx4RmHlCgI7Zl2dioCxkF%25vUqCNwuWXsO7QNeV6iTxjgzhRc2LUjqA7fQrmVOJUPYDImTB8VuyY0oVk0DBRlqvzpQNqjdtAsvyJ5I") center/cover;
+  color:var(--light);
+  min-height:400px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.hero h2{font-size:2.2rem;margin-bottom:10px}
+.hero p{max-width:500px;margin-bottom:20px;font-size:1.1rem}
+
+.btn{
+  background:var(--primary);
+  padding:14px 22px;
+  color:var(--light);
+  border:none;
+  font-size:1rem;
+  border-radius:6px;
+  cursor:pointer;
+  transition:transform 0.2s,box-shadow 0.2s;
+  max-width:fit-content;
+}
+
+.btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(193,18,31,0.3)}
+.btn:active{transform:translateY(0)}
+
+/* ===== SECTIONS ===== */
+section{padding:60px 5%}
+.container{max-width:1100px;margin:auto}
+
+.section-title{
+  font-size:1.8rem;
+  margin-bottom:25px;
+  border-left:5px solid var(--primary);
+  padding-left:10px;
+}
+
+/* ===== SERVICES ===== */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:var(--gray);
+  padding:25px;
+  border-radius:8px;
+  transition:transform 0.2s,box-shadow 0.2s;
+  border:1px solid #eee;
+}
+
+.card:hover{transform:translateY(-5px);box-shadow:0 8px 16px rgba(0,0,0,0.1)}
+
+.price{
+  font-weight:bold;
+  color:var(--primary);
+  margin-top:10px;
+  font-size:1.1rem;
+}
+
+/* ===== FORM ===== */
+form{
+  max-width:500px;
+  display:grid;
+  gap:15px;
+}
+
+input,select{
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  font-size:1rem;
+  transition:border-color 0.2s;
+}
+
+input:focus,select:focus{
+  outline:none;
+  border-color:var(--primary);
+  box-shadow:0 0 5px rgba(193,18,31,0.2);
+}
+
+/* ===== GALLERY ===== */
+.gallery{background:#fafafa}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
+
+.gallery-grid img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:8px;
+  transition:transform 0.3s;
+}
+
+.gallery-grid img:hover{transform:scale(1.05)}
+
+/* ===== TRUST ===== */
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  text-align:center;
+}
+
+.trust-box{
+  padding:20px;
+  border:1px solid #eee;
+  border-radius:8px;
+  font-weight:600;
+  background:var(--gray);
+  transition:transform 0.2s;
+}
+
+.trust-box:hover{transform:scale(1.05)}
+
+/* ===== CTA ===== */
+.cta{
+  background:var(--primary);
+  color:var(--light);
+  text-align:center;
+  padding:60px 20px;
+}
+
+.cta h2{margin-bottom:10px}
+
+.cta a{
+  display:inline-block;
+  margin-top:15px;
+  background:var(--light);
+  color:var(--primary);
+  padding:14px 28px;
+  font-weight:700;
+  text-decoration:none;
+  border-radius:6px;
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+
+.cta a:hover{transform:scale(1.05);box-shadow:0 4px 12px rgba(0,0,0,0.2)}
+
+/* ===== FOOTER ===== */
+footer{
+  background:var(--dark);
+  color:var(--light);
+  padding:25px;
+  text-align:center;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  header{flex-direction:column;gap:15px}
+  .hero h2{font-size:1.6rem}
+  .section-title{font-size:1.4rem}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Overide Auto Repair</h1>
+  <a href="tel:+12040000000" aria-label="Call Overide Auto Repair">📞 Call Now</a>
+</header>
+
+<div class="hero">
+  <h2>Reliable Mechanical Service You Can Trust</h2>
+  <p>Professional diagnostics, repairs, and maintenance.</p>
+  <button class="btn" onclick="scrollToBooking()" aria-label="Book an appointment">Book Appointment</button>
+</div>
+
+<section>
+<div class="container">
+<h3 class="section-title">Our Services</h3>
+
+<div class="services">
+<div class="card"><h4>Oil Change</h4><p>Oil & filter replacement.</p><div class="price">$70</div></div>
+<div class="card"><h4>Brake Service</h4><p>Pads & inspection.</p><div class="price">$110+</div></div>
+<div class="card"><h4>Diagnostics</h4><p>Full system scan.</p><div class="price">$50</div></div>
+<div class="card"><h4>Tire Change</h4><p>Seasonal change & balance.</p><div class="price">$100</div></div>
+</div>
+</div>
+</section>
+
+<section id="booking">
+<div class="container">
+<h3 class="section-title">Book Appointment</h3>
+
+<form onsubmit="submitForm(event)">
+<input type="text" placeholder="Your Name" required aria-label="Full name">
+<input type="tel" placeholder="Phone Number" required aria-label="Phone number">
+
+<select required aria-label="Select service">
+<option value="">Select Service</option>
+<option>Oil Change</option>
+<option>Brake Service</option>
+<option>Diagnostics</option>
+<option>Repair</option>
+</select>
+
+<input type="date" required aria-label="Preferred date">
+
+<button class="btn" type="submit">Request Booking</button>
+</form>
+
+<p id="msg" style="margin-top:10px;color:green;font-weight:600;" role="status"></p>
+</div>
+</section>
+
+<section class="gallery">
+<div class="container">
+<h3 class="section-title">Our Work</h3>
+
+<div class="gallery-grid">
+<img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e" loading="lazy" alt="Car repair work">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" loading="lazy" alt="Mechanic working on engine">
+<img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc" loading="lazy" alt="Professional garage">
+<img src="https://tse3.mm.bing.net/th/id/OIP.vxxH0AewSOnfhcIrdr-EPAHaFS?rs=1&pid=ImgDetMain" loading="lazy" alt="Tire mounting service">
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h3 class="section-title">Why Choose Us</h3>
+
+<div class="trust-grid">
+<div class="trust-box">✔ Honest Pricing</div>
+<div class="trust-box">✔ Fast Service</div>
+<div class="trust-box">✔ Experienced Mechanic</div>
+<div class="trust-box">✔ Quality Parts</div>
+<div class="trust-box">✔ Local Winnipeg Shop</div>
+<div class="trust-box">✔ Reliable Diagnostics</div>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<h2>Need Your Car Fixed Today?</h2>
+<p>Call now or request an appointment online.</p>
+<a href="tel:+12040000000">📞 Call Now</a>
+</section>
+
+<footer>
+<p>📍1833 Inkster Blvd, Winnipeg, MB</p>
+<p>© 2026 Overide Auto Repair</p>
+</footer>
+
+<script>
+function scrollToBooking(){
+  document.getElementById("booking").scrollIntoView({behavior:"smooth"});
+}
+
+function submitForm(e){
+  e.preventDefault();
+  const msg = document.getElementById("msg");
+  msg.textContent = "✅ Appointment request received. We will call you to confirm.";
+  e.target.reset();
+}
+</script>
+
+</body>
+</html>
